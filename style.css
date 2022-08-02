@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #ffffff;
+}
+
+body {
+    background-color: rgb(236, 236, 236);
+    color: #181818;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    /* footer support */
+    margin-bottom: 100px;
+  }
+
+#grid {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+ }
+
+ .grid-element {
+    border-color: black;
+    border: 4px;
+ }
+
+ .border-top-left {
+    border-top: 1px solid rgb(156, 156, 156);
+    border-left: 1px solid rgb(156, 156, 156);
+}
+
+.border-right {
+    border-right: 1px solid rgb(156, 156, 156);
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(156, 156, 156);
+}
