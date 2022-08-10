@@ -2,15 +2,40 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Etch-a-Sketch</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="header">
     <h1>Etch-a-Sketch</h1>
-    
+    </header>
+    <main class="main">
     <div id="grid"></div>
-    <div id="options"></div>
-
+    <div id="options" class="options">
+        <input id="colorChoice" type="color" value="#333333" />
+        <button id="colorBtn">Color mode</button>
+        <!-- <button id="rainbowBtn">Rainbow mode</button> -->
+        <button id="eraserBtn">Eraser</button>
+        <button id="clearBtn">Clear</button>
+        <div id="sizeValue" class="size-value">16 x 16</div>
+        <input id="sizeSlider" type="range" name="slider"  min="1" max="64" value="16" /> 
+         <!-- onmousemove="changeSize(currentSize) oninput="changeSize(this.value)" -->
+    </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        &nbsp;&nbsp;&nbsp;xander
+      </p>
+      <a href="https://github.com/xandernesta/odin-etch-a-sketch" target="_blank">
+        <img class="fa-github" src="GitHub-Mark-64px.png" height="32" width="32" alt="fa-github">
+      </a>
+    </footer>
     <script src="scripts.js"></script>
 </body>
 </html>
