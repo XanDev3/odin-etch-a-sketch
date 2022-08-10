@@ -143,6 +143,8 @@ input[type='color'] {
 input[type='color']::-webkit-color-swatch-wrapper {
     padding: 0;
     background-color: var(--secondary-dark);
+    border: none;
+    
 }
   
 input[type='color']::-webkit-color-swatch {
@@ -166,6 +168,10 @@ input[type='color']::-webkit-color-swatch {
   } 
 
   /* FOOTER */
+a {
+    text-decoration:none;
+    color: inherit
+ }
 
 .footer {
     position: absolute;
@@ -177,15 +183,16 @@ input[type='color']::-webkit-color-swatch {
     gap: 10px;
     width: 100%;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
   }
   
-.fa-github {
+.xn-github {
     color: black;
     font-size: 10px;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: -4px;
   }
   
-.fa-github:hover {
+.xn-github:hover {
     transform: rotate(360deg) scale(1.2);
   }
