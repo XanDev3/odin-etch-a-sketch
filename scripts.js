@@ -19,7 +19,6 @@ function setCurrentSize(newSize) {
   sizeSlider.setAttribute("value", newSize);
 }
 
-
 //selects all elements needed by ID
 const grid = document.getElementById('grid');
 const colorChoice = document.getElementById('colorChoice');
@@ -41,8 +40,6 @@ eraserBtn.onclick = () => setCurrentMode('eraser');
 clearBtn.onclick = () => reloadGrid();
 sizeSlider.onchange= (e) => setCurrentSize(e.target.value);
 sizeSlider.oninput = (e) => changeSize(e.target.value);
-
-
 
 //function to clear and remake grid
 function reloadGrid() {
@@ -81,7 +78,7 @@ function makeGrid(size){
   }
     }
 
-    //function to change color of grid squars
+//function to change color of grid squares
 function changeColor(e) {    
   if (e.type === 'mouseover' && !mouseDown) return;
   else if (currentMode === 'color') {
@@ -100,7 +97,6 @@ function activateButton(newMode) {
   } else if (currentMode === 'eraser') {
     eraserBtn.classList.remove('active')
   }
-
   if (newMode === 'rainbow') {
     rainbowBtn.classList.add('active')
   } else if (newMode === 'color') {
@@ -110,17 +106,19 @@ function activateButton(newMode) {
   }
 }
 
+//changes the size of the grid and reloads it, then updates the html with new size value
 function changeSize(value){
   setCurrentSize(value);
   reloadGrid();
   updateSizeValue(value);
-  
 }
 
+//updates the values displayed in the html
 function updateSizeValue(value) {
   sizeValue.innerHTML = `${value} x ${value}`
 }
 
+//blanks entire grid
 function clearGrid(){
   grid.innerHTML = '';
 }
